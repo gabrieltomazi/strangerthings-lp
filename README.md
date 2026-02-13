@@ -1,4 +1,6 @@
 # 📺 Stranger Things: The Experience
+https://github.com/user-attachments/assets/f96b8164-13c9-4e37-839e-ce51f7d73429
+
 Um projeto interativo de interface web inspirado na série Stranger Things da Netflix. O objetivo principal deste projeto é proporcionar uma experiência imersiva através de animações fluidas, efeitos de scroll suave e tipografia temática.
 
 ## 🚀 Tecnologias Utilizadas
