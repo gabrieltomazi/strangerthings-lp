@@ -34,7 +34,7 @@ Clone este repositório:
 
 ```
 Bash
-git clone https://github.com/seu-usuario/nome-do-projeto.git
+git clone https://github.com/gabrieltomazi/strangerthings-lp.git
 ```
 Navegue até a pasta do projeto:
 ```
