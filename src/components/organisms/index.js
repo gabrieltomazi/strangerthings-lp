@@ -1,0 +1,5 @@
+export * from './Hero'
+export * from './CitySection'
+export * from './SectionTestimonials'
+export * from './SectionThanks'
+export * from './Footer'
