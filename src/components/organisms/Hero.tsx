@@ -50,30 +50,43 @@ export const Hero = ({ onExploreClick }: HeroProps) => {
 
   return (
     <section
-      className="hero w-full h-screen flex items-center justify-between px-[7vw] pb-[7vw] pt-0 relative bg-cover bg-position-[50%_0%] before:content-[''] before:absolute before:inset-0 before:z-2 before:bg-linear-to-b before:from-transparent before:from-60% before:to-[#0c0102]"
+      className="hero 
+      w-full h-screen px-[7vw] pb-[7vw] pt-0 relative 
+      
+      bg-cover bg-position-[50%_0%] before:content-[''] before:absolute before:inset-0 before:z-2 before:bg-linear-to-b before:from-transparent before:from-60% before:to-[#0c0102]"
       ref={heroRef}
     >
       <picture data-speed=".7" className="w-full h-full absolute z-1 left-0 top-0 [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute">
-        <source media="(max-width: 600px)" srcSet={HeroBackMobile} />
+        <source media="(max-width: 640px)" srcSet={HeroBackMobile} />
         <img src={HeroBack} />
       </picture>
 
       <picture className="w-full h-full absolute z-1 left-0 top-0 [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute">
-        <source media="(max-width: 600px)" srcSet={HeroFrontMobile} />
+        <source media="(max-width: 640px)" srcSet={HeroFrontMobile} />
         <img src={HeroFront} />
       </picture>
 
-      <div className="left w-[30%] z-3 mb-40" data-speed="1.5">
-        <h3 className="text-[2vw] font-normal tracking-[4px] ">THE EXPERIENCE</h3>
-        <h1 className="text-[3.7vw] font-benguiat">STRANGER THINGS</h1>
-      </div>
+      <main
+        className='z-3 w-full flex flex-col sm:flex-row items-center justify-between gap-2 mb-40'
+      >
 
-      <div className="right w-[30%] z-3 flex flex-col items-end mb-40" data-speed="1.5">
-        <p className="splitText text-[2vw] mb-8 text-end">Descubra os seus poderes e vire o herói de sua própria aventura!</p>
-        <Button onExploreClick={onExploreClick}>
-          ESCOLHA SUA CIDADE
-        </Button>
-      </div>
+        <div
+          className="left z-3 sm:w-[30%] sm:mb-40 mt-20 text-center sm:text-start"
+        >
+          <h3 className="text-[6vw] sm:text-[2vw] font-normal tracking-[4px]">THE EXPERIENCE</h3>
+          <h1 className="text-[12vw] sm:text-[3.7vw]  font-benguiat">STRANGER THINGS</h1>
+        </div>
+
+        <div
+          className="right sm:w-[30%] z-3 flex flex-col items-end "
+          data-speed="1.5">
+          <p className="splitText w-fit sm:text-[2vw] mb-8 text-end">Descubra os seus poderes e vire o herói de sua própria aventura!</p>
+          <Button onExploreClick={onExploreClick}>
+            ESCOLHA SUA CIDADE
+          </Button>
+        </div>
+      </main>
+
     </section>
   )
 }
