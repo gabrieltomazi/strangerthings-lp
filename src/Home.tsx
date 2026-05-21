@@ -1,6 +1,7 @@
-import { WrapperContent, Header, Hero, CitySection, SectionTestimonials, BgMonster, SectionThanks, Footer } from './components'
-import gsap from 'gsap'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
+import { WrapperContent } from './components/molecules/WrapperContent';
+import { Header } from './components/molecules/Header';
+import { BgMonster, CitySection, Footer, Hero, SectionTestimonials, SectionThanks } from './components';
 
 function Home() {
 
@@ -11,8 +12,6 @@ function Home() {
       smoother.scrollTo("#cities", true, "top top")
     }
   }
-
-
 
   return (
     <WrapperContent>
