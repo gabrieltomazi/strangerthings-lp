@@ -1,15 +1,10 @@
-import { Container } from "./style"
-
-
-
-
 export const SectionThanks = () => {
 
   return (
-    <Container className="sectionThanks">
+    <section className="sectionThanks flex flex-col items-center relative z-2 bg-[#060101] w-full px-[7vw] py-[7vw]">
       <h2 className="splitText">OBRIGADO POR SE JUNTAR A NÓS NESTA AVENTURA EM:</h2>
-      <div className="scrollContainer">
-        <ul className="scrollContent">
+      <div className="scrollContainer w-max">
+        <ul className="scrollContent flex gap-[3vw] mt-5">
           <li>Sidney</li>
           <li>Rio de Janeiro</li>
           <li>São Paulo</li>
@@ -22,7 +17,7 @@ export const SectionThanks = () => {
           <li>Toronto</li>
           <li>Seattle</li>
         </ul>
-        <ul className="scrollContent">
+        <ul className="scrollContent hidden gap-[3vw] mt-5">
           <li>Sidney</li>
           <li>Rio de Janeiro</li>
           <li>São Paulo</li>
@@ -35,7 +30,7 @@ export const SectionThanks = () => {
           <li>Toronto</li>
           <li>Seattle</li>
         </ul>
-        <ul className="scrollContent">
+        <ul className="scrollContent hidden gap-[3vw] mt-5">
           <li>Sidney</li>
           <li>Rio de Janeiro</li>
           <li>São Paulo</li>
@@ -49,9 +44,6 @@ export const SectionThanks = () => {
           <li>Seattle</li>
         </ul>
       </div>
-    </Container>
-
+    </section>
   )
-
-
 }

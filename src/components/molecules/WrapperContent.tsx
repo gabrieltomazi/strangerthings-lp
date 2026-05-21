@@ -1,15 +1,19 @@
-// App.jsx
-import { useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother'; // Certifique-se de ter o arquivo do plugin
+import { ScrollSmoother } from 'gsap/ScrollSmoother'; 
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-export function WrapperContent({ children }) {
-  const wrapperRef = useRef();
-  const contentRef = useRef();
+interface WrapperContentProps {
+  children: ReactNode
+}
+
+
+export function WrapperContent({ children }: WrapperContentProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     ScrollSmoother.create({
