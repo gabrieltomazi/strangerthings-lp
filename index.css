@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Benguiat";
+  src: url("/src/assets/fonts/Benguiat Bold.ttf") format("truetype");
+}
+
+@theme {
+  --font-benguiat: "Benguiat", sans-serif;
+  --animate-infinite-text: infiniteText 10s infinite linear;
+
+  @keyframes infiniteText {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+html, body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
