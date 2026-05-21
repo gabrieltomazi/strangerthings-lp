@@ -4,19 +4,22 @@ https://github.com/user-attachments/assets/f96b8164-13c9-4e37-839e-ce51f7d73429
 Um projeto interativo de interface web inspirado na série Stranger Things da Netflix. O objetivo principal deste projeto é proporcionar uma experiência imersiva através de animações fluidas, efeitos de scroll suave e tipografia temática.
 
 ## 🚀 Tecnologias Utilizadas
-Este projeto foi construído utilizando as melhores ferramentas para animação e performance web:
+Este projeto foi totalmente modernizado e refatorado utilizando as melhores ferramentas para desenvolvimento robusto, animação e alta performance web:
 
-<b>HTML5 & CSS3:</b> Estrutura semântica e estilização avançada com Flexbox e Media Queries.
+<b>React & TypeScript:</b> Interface de usuário reescrita em TypeScript, garantindo tipagem estática, prevenção de erros em tempo de compilação, autocompletar inteligente e maior manutenibilidade.
 
-<b>GSAP (GreenSock Animation Platform):</b> Motor principal de animações.
+<b>Tailwind CSS v4:</b> Adotado como motor de CSS utilitário nativo e integrado via plugin do Vite, oferecendo estilização rápida, responsiva e performática, substituindo a antiga solução baseada em styled-components.
 
-<b>ScrollSmoother:</b> Para criar a experiência de "smooth scroll" premium.
+<b>GSAP (GreenSock Animation Platform):</b> O motor de animações mais robusto do mercado, integrado de forma nativa com React utilizando o ecossistema oficial `@gsap/react`.
 
-<b>ScrollTrigger:</b> Para disparar animações baseadas na posição do scroll.
+<b>ScrollSmoother:</b> Para criar a experiência de rolagem suave ("smooth scroll") fluida e premium em toda a página.
 
-<b>SplitText:</b> Para manipulação e animação individual de caracteres e linhas de texto.
+<b>ScrollTrigger:</b> Para sincronizar e disparar as animações com precisão absoluta de acordo com a rolagem da página.
 
-<b>Google Fonts:</b> Tipografia personalizada (Poppins e Benguiat).
+<b>SplitText:</b> Para segmentação de textos em linhas, palavras e caracteres individuais, permitindo efeitos visuais refinados
+de revelação de texto.
+
+<b>Google Fonts:</b> Tipografia personalizada utilizando as fontes **Poppins** e a marcante **Benguiat** (típica do universo da série).
 
 ## ⚡ Funcionalidades Principais
 <b>Scroll Infinito de Cidades:</b> Um letreiro (marquee) puramente em CSS que exibe as sedes da experiência sem interrupções.
