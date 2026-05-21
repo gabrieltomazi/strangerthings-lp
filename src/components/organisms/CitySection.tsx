@@ -39,7 +39,7 @@ export const CitySection = () => {
 
   return (
     <section className="citySection flex flex-col w-full gap-16 px-[7vw] py-[7vw]" id="cities">
-      <div className="title -mt-25 z-12 flex justify-between items-center">
+      <div className="title z-12 flex justify-between items-center">
         <h2>ESCOLHA SUA CIDADE</h2>
 
         <Button>
@@ -47,23 +47,26 @@ export const CitySection = () => {
         </Button>
 
       </div>
-      <div className="cards z-20 flex justify-between" ref={sectionRef}>
+      <div
+        className="cards z-20 grid grid-cols-1 sm:grid-cols-3 gap-6"
+        ref={sectionRef}
+      >
         <div
-          className="card z-20 w-[32%] aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
+          className="card z-20 w-full aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
           style={{ backgroundImage: `url(${Card1})` }}
         >
           <h3>Sidney</h3>
           <p>INGRESSOS DISPONÍVEIS</p>
         </div>
         <div
-          className="card z-20 w-[32%] aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
+          className="card z-20 w-full aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
           style={{ backgroundImage: `url(${Card2})` }}
         >
           <h3 className="max-w-25">Cidade do México</h3>
           <p>INGRESSOS DISPONÍVEIS</p>
         </div>
         <div
-          className="card z-20 w-[32%] aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
+          className="card z-20 w-full aspect-video bg-cover bg-center flex items-end justify-between p-5 transition-transform duration-400 ease-out hover:scale-110 cursor-pointer"
           style={{ backgroundImage: `url(${Card3})` }}
         >
           <h3>Yas Island</h3>

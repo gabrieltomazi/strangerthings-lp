@@ -27,19 +27,32 @@ export const Footer = () => {
   })
 
   return (
-    <footer 
-      ref={footerRef} 
-      className="w-full flex flex-col bg-center bg-cover relative"
+    <footer
+      ref={footerRef}
+      className="w-full  lg:flex-row bg-center bg-cover relative"
       style={{ backgroundImage: `url(${BgFooter})` }}
     >
-      <div className="footerContent flex w-full p-[7vw]">
-        <div className="footerLogo w-[30%]">
-          <h3 className="text-[24px] font-normal tracking-[4px]">THE EXPERIENCE</h3>
-          <h2 className="text-[3.7vw] font-benguiat">STRANGER THINGS</h2>
+      <main className="footerContent lg:flex lg:justify-between p-[7vw]">
+
+
+        <div className="footerLogo w-full lg:w-min lg:text-start text-center mb-4">
+
+          <h3 className="text-[24px] font-normal tracking-[4px]">
+            THE EXPERIENCE
+          </h3>
+          <h2 className="text-5xl font-benguiat">
+            STRANGER THINGS
+          </h2>
+
         </div>
-        <div className="footerSections flex flex-1 justify-end gap-[6%] items-end">
-          <div className="socials">
-            <h3 className="text-[18px] font-medium mb-3">REDES SOCIAIS</h3>
+
+
+        <div className="footerSections grid grid-cols-2 lg:flex lg:gap-8 lg:items-center justify-center">
+
+          <div className="socials mx-auto col-span-2 mb-4" >
+            <h3 className="text-[18px] font-medium mb-3 lg:w-max">
+              REDES SOCIAIS
+            </h3>
             <ul className="flex flex-row gap-3">
               <a>
                 <li><img src={FacebookFooter} alt="Facebook" /></li>
@@ -52,12 +65,14 @@ export const Footer = () => {
               </a>
             </ul>
           </div>
-          <div className="partner">
-            <h3 className="text-[18px] font-medium mb-3">PARCEIRO DE MÍDIA</h3>
+
+          <div className="partner flex flex-col justify-center items-center ">
+            <h3 className="text-[18px] lg:w-max font-medium mb-3">PARCEIRO DE MÍDIA</h3>
             <img src={PartnerFooter} alt="" />
           </div>
-          <div className="institutional">
-            <h3 className="text-[18px] font-medium mb-3">INSTITUTIONAL</h3>
+
+          <div className="institutional flex flex-col justify-center items-center">
+            <h3 className="text-[18px] font-medium">INSTITUTIONAL</h3>
             <nav>
               <ul>
                 <a>
@@ -75,13 +90,15 @@ export const Footer = () => {
               </ul>
             </nav>
           </div>
+
         </div>
-      </div>
+      </main>
 
       <div className="footerLogos w-full flex justify-between px-[4vw]">
         <img src={NetflixLogo} alt="Netflix logo" />
         <img src={FeverLogo} alt="Fever logo" />
       </div>
+
       <div className="infiniteText flex w-max justify-end items-end overflow-hidden">
         <h3 className="text-[#bfbfbf] text-[12vw] font-benguiat mix-blend-color-dodge animate-infinite-text pl-[8vw]">THE EXPERIENCE </h3>
         <h3 className="text-[#bfbfbf] text-[12vw] font-benguiat mix-blend-color-dodge animate-infinite-text pl-[8vw]">THE EXPERIENCE </h3>
