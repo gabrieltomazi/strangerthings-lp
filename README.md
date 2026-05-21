@@ -42,8 +42,8 @@ git clone https://github.com/gabrieltomazi/strangerthings-lp.git
 Navegue até a pasta do projeto:
 ```
 Bash
-cd nome-do-projeto
-Abra o arquivo index.html no seu navegador ou utilize a extensão Live Server no VS Code para uma melhor experiência.
+cd strangerthings-lp
+npm run dev
 ```
 ## 📁 Estrutura de Arquivos
 ```
