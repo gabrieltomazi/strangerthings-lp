@@ -10,12 +10,15 @@ import gsap from "gsap"
 
 interface HeroProps {
   onExploreClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  isLoading?: boolean;
 }
 
-export const Hero = ({ onExploreClick }: HeroProps) => {
+export const Hero = ({ onExploreClick, isLoading = false }: HeroProps) => {
   const heroRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
+    if (isLoading) return;
+
     gsap.from(".hero", {
       opacity: 0,
       duration: 1
@@ -46,7 +49,7 @@ export const Hero = ({ onExploreClick }: HeroProps) => {
         start: "top 85%",
       }
     });
-  })
+  }, [isLoading]);
 
   return (
     <section

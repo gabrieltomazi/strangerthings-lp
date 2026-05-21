@@ -1,10 +1,9 @@
-import { ScrollSmoother } from 'gsap/ScrollSmoother'
-import { WrapperContent } from './components/molecules/WrapperContent';
-import { Header } from './components/molecules/Header';
-import { BgMonster, CitySection, Footer, Hero, SectionTestimonials, SectionThanks } from './components';
+
+import { BgMonster, CitySection, Footer, Header, Hero, SectionTestimonials, SectionThanks, WrapperContent } from './components';
 import { useState } from 'react';
 import { Preloader } from './components/organisms/Preloader';
 import { useGSAP } from '@gsap/react';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 function Home() {
 
@@ -32,9 +31,9 @@ function Home() {
 
       <div className={isLoading ? "h-screen overflow-hidden opacity-0" : "opacity-100 transition-opacity duration-500"}>
 
-        <WrapperContent>
+        <WrapperContent isLoading={isLoading}>
           <Header />
-          <Hero onExploreClick={handleScrollToCity} />
+          <Hero onExploreClick={handleScrollToCity} isLoading={isLoading} />
 
           <BgMonster>
             <CitySection />

@@ -7,22 +7,25 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 interface WrapperContentProps {
-  children: ReactNode
+  children: ReactNode;
+  isLoading?: boolean;
 }
 
 
-export function WrapperContent({ children }: WrapperContentProps) {
+export function WrapperContent({ children, isLoading = false }: WrapperContentProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    if (isLoading) return;
+
     ScrollSmoother.create({
       wrapper: wrapperRef.current,
       content: contentRef.current,
       smooth: 2,
       effects: true,
     });
-  }, { scope: wrapperRef });
+  }, [isLoading]);
 
   return (
     <div id="smooth-wrapper" ref={wrapperRef}>
