@@ -2,8 +2,21 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import { WrapperContent } from './components/molecules/WrapperContent';
 import { Header } from './components/molecules/Header';
 import { BgMonster, CitySection, Footer, Hero, SectionTestimonials, SectionThanks } from './components';
+import { useState } from 'react';
+import { Preloader } from './components/organisms/Preloader';
+import { useGSAP } from '@gsap/react';
 
 function Home() {
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useGSAP(() => {
+    if (isLoading) return;
+
+    window.scrollTo(0, 0)
+
+  }, [isLoading]);
+
 
   const handleScrollToCity = () => {
     const smoother = ScrollSmoother.get();
@@ -14,20 +27,26 @@ function Home() {
   }
 
   return (
-    <WrapperContent>
+    <>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
-      <Header />
-      <Hero onExploreClick={handleScrollToCity} />
+      <div className={isLoading ? "h-screen overflow-hidden opacity-0" : "opacity-100 transition-opacity duration-500"}>
 
-      <BgMonster>
-        <CitySection />
-        <SectionTestimonials />
-      </BgMonster>
+        <WrapperContent>
+          <Header />
+          <Hero onExploreClick={handleScrollToCity} />
 
-      <SectionThanks />
-      <Footer />
+          <BgMonster>
+            <CitySection />
+            <SectionTestimonials />
+          </BgMonster>
 
-    </WrapperContent>
+          <SectionThanks />
+          <Footer />
+
+        </WrapperContent>
+      </div>
+    </>
   )
 }
 
