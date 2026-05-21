@@ -45,14 +45,27 @@ Bash
 cd strangerthings-lp
 npm run dev
 ```
-## 📁 Estrutura de Arquivos
-```
-Plaintext
-├── images/          # Assets de imagem (.webp e .svg)
-├── fonts/           # Fontes personalizadas (Benguiat Bold)
-├── index.html       # Estrutura principal
-├── styles.css       # Estilização e Media Queries
-└── scripts.js       # Lógica de animação GSAP
+## 📂 Estrutura de Arquivos
+Abaixo está a organização de pastas do projeto após a refatoração para React, TypeScript e a arquitetura de Componentes Atômicos:
+```plaintext
+strangerthings-lp/
+├── src/
+│   ├── assets/
+│   │   ├── fonts/            # Fontes personalizadas (ex: Benguiat Bold)
+│   │   └── images/           # Assets visuais (.webp e .svg)
+│   ├── components/           # Componentes modulares reutilizáveis
+│   │   ├── atoms/            # Elementos menores (ex: Button, ArrowSvg)
+│   │   ├── molecules/        # Blocos funcionais (ex: Header, BgMonster)
+│   │   ├── organisms/        # Seções completas da página (ex: Hero, CitySection, Footer)
+│   │   └── index.ts          # Exportador geral de componentes
+│   ├── Home.tsx              # Tela e layout principal do projeto
+│   ├── main.tsx              # Ponto de entrada do React e inicialização
+│   └── vite-env.d.ts         # Definições globais de tipos do Vite
+├── index.css                 # Importação do Tailwind CSS v4 e estilos globais
+├── index.html                # Estrutura HTML principal (ponto de montagem #root)
+├── package.json              # Script e gerenciamento de dependências
+├── tsconfig.json             # Configurações e diretivas do TypeScript
+└── vite.config.js            # Configurações do Vite (com suporte ao Tailwind)
 ```
 ## ✒️ Autor
 Desenvolvido por Gabriel Tomazi —   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-tomazi/)
